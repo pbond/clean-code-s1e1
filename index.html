@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Todo App</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
-  </head>
-  <body id="todo-list">
-    <div class="matrix">
-      <img class="matrix__image" src="./eisenhower-matrix.jpg" alt="Matrix image">
-      <a class="matrix__details-link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-    </div>
-    <div class="centered-content">
-      <p id="new-task-form" class="task-form">
-        <label for="new-task" class="task-form__header">Add Item</label>
-        <div class="task-form__wrapper">
-          <input id="new-task" class="task-form__content" type="text">
-          <button class="button task-form__submit">Add</button>
-        </div>
-      </p>
+<head>
+  <title>Todo App</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+</head>
+<body id="todo-list">
+  <header class="matrix">
+    <img class="matrix__image" src="./eisenhower-matrix.jpg" alt="Matrix image">
+    <a class="matrix__details-link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+  </header>
+  <main class="centered-content">
+    <section class="task-form">
+      <label for="new-task" class="task-form__header">Add Item</label>
+      <div class="task-form__wrapper">
+        <input id="new-task" class="task-form__content" type="text">
+        <button class="button task-form__submit">Add</button>
+      </div>
+    </section>
+    <section class="incomplete-tasks">
       <h3 class="list-header">Todo</h3>
-      <ul id="incompleteTasks" class="task-list">
+      <ul class="task-list">
         <li class="task-list__item">
           <input type="checkbox" class="task-list__check">
           <label class="task-list__content">Pay Bills</label>
@@ -39,8 +40,10 @@
           </button>
         </li>
       </ul>
-      <h3 class="list-header">Completed</h3>
-      <ul id="completed-tasks" class="task-list">
+    </section>
+    <section class="completed-tasks">
+    <h3 class="list-header">Completed</h3>
+    <ul id="completed-tasks" class="task-list">
       <li class="task-list__item">
         <input type="checkbox" checked class="task-list__check">
         <label class="task-list__content">See the Doctor</label>
@@ -50,8 +53,9 @@
           <img class="task-list__delete-icon" src="./remove.svg" alt="Remove task">
         </button>
       </li>
-      </ul>
-    </div>
-    <script src="app.js"></script>
-  </body>
+    </ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
 </html>
